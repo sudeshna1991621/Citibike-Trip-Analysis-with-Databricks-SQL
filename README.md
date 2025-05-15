@@ -31,37 +31,14 @@ This project analyzes Citibike trip data to uncover ridership patterns, differen
 
 ## SQL Analysis
 ### Core Queries
-#### 1. Basic Trip Analysis
-```sql
-SELECT 
-  member_casual, 
-  rideable_type, 
-  started_at, 
-  ended_at, 
-  DATEDIFF(MINUTE, started_at, ended_at) AS 'Total Duration' 
-FROM jc_slice_data_22;
+**Basic Trip Analysis Query:**
 
----
-#### 2. Enhanced Trip View (vw_jc_bike_data_22)
-```sql
-CREATE VIEW vw_jc_bike_data_22
-AS 
-SELECT
-  t1.ride_id,
-  t1.member_casual,
-  t1.rideable_type,
-  t1.started_at,
-  t1.ended_at,
-  DATEDIFF(MINUTE, t1.started_at, t1.ended_at) AS trip_duration_mins,
-  t2.station_name AS start_station_name,
-  t3.station_name AS end_station_name
-FROM jc_bike_data_22 AS t1
-INNER JOIN jc_station_data_22 AS t2
-  ON t1.start_station_id = t2.station_id
-INNER JOIN jc_station_data_22 AS t3
-  ON t1.end_station_id = t3.station_id
-WHERE 
-  t1.rideable_type <> 'docked_bike' 
-  AND t1.end_station_id IS NOT NULL;
+SELECT  
+  member_casual,  
+  rideable_type,  
+  started_at,  
+  ended_at,  
+  DATEDIFF(MINUTE, started_at, ended_at) AS 'Total Duration'  
+FROM jc_slice_data_22;
 
 
