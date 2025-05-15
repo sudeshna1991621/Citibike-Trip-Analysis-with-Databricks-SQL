@@ -32,6 +32,7 @@ This project analyzes Citibike trip data to uncover ridership patterns, differen
 ## SQL Analysis
 ### Core Queries
 **Basic Trip Analysis Query:**
+```sql
 SELECT  
   member_casual,  
   rideable_type,  
@@ -39,8 +40,10 @@ SELECT
   ended_at,  
   DATEDIFF(MINUTE, started_at, ended_at) AS 'Total Duration'  
 FROM jc_slice_data_22;
+```
 
 **Enhanced Trip View (vw_jc_bike_data_22)**
+```sql
 CREATE VIEW vw_jc_bike_data_22
 AS 
 SELECT
