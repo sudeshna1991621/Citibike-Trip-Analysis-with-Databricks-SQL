@@ -31,6 +31,7 @@ This project analyzes Citibike trip data to uncover ridership patterns, differen
 
 ## SQL Analysis
 ### Core Queries
+![Dashboard](./s3.png)
 **Basic Trip Analysis Query:**
 ```sql
 SELECT  
