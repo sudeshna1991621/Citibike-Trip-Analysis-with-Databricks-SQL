@@ -1,4 +1,4 @@
-# Citibike Trip Analysis with SQL on Databricks
+# Citibike Trip Analysis with SQL on Microsoft Azure Databricks
 
 ## Project Overview
 This project analyzes Citibike trip data to uncover ridership patterns, differences between casual riders and annual members, popular stations, and ride duration trends. The analysis is performed using SQL on Databricks, with results visualized to highlight key insights.
