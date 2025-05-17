@@ -66,6 +66,17 @@ WHERE
   t1.rideable_type <> 'docked_bike' 
   AND t1.end_station_id IS NOT NULL;
 ```
+**most_common_stations**
+```sql
+select 
+concat(start_station_name, '-->', end_station_name) as `Start and End Journey`,
+member_casual as `Rider Type`,
+count(*) as `Number of Trips`
+from course_project.citibike.vw_jc_bike_data_22
+where started_at between :start_date and :end_date
+group by 1,2
+order by 3 desc;
+```
 ## 📌 Dashboard Snapshot
 
 ![Dashboard](./s1.png)
