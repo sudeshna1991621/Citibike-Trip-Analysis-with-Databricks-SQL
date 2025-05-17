@@ -80,4 +80,17 @@ order by 3 desc;
 ## 📌 Dashboard Snapshot
 
 ![Dashboard](./s1.png)
+**Seasonal Trip Analysis by Rider Type**
+**casual_data**
+```sql
+select count(ride_id),rideable_type from course_project.citibike.vw_jc_bike_data_22
+where member_casual='casual' and
+started_at between :start_date and :end_date group by rideable_type;
+```
+**member_data**
+```sql
+select count(ride_id),rideable_type from course_project.citibike.vw_jc_bike_data_22
+where member_casual='member' and
+started_at between :start_date and :end_date group by rideable_type;
+```
 ![Dashboard](./s2.png)
