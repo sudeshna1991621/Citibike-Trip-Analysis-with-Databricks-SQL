@@ -63,3 +63,7 @@ INNER JOIN jc_station_data_22 AS t3
 WHERE 
   t1.rideable_type <> 'docked_bike' 
   AND t1.end_station_id IS NOT NULL;
+```
+## 📌 Dashboard Snapshot
+
+![Dashboard](./s1.png)
