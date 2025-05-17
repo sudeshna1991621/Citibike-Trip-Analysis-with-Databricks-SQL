@@ -7,6 +7,7 @@ This project analyzes Citibike trip data to uncover ridership patterns, differen
 
 ## Datasets
 - **Primary Datasets**:
+Dataset folder: [Google Drive Link](https://drive.google.com/drive/folders/1w80HmoMygH85bABUpU-GKEPFpylp9RbB?usp=sharing)
   - `jc_bike_data_22`: Contains ride details (start/end times, member type, rideable type, and station IDs).
   - `jc_station_data_22`: Maps station IDs to human-readable station names.
 - **Derived Datasets**:
